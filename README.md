@@ -24,3 +24,9 @@ grad_list = pc_grad_update(grad_list)
 ```
 
 Currently validated on Multi MNIST: https://github.com/OrthoDex/MultiObjectiveOptimization/tree/feature/pc-grad
+
+## Reproducing Results:
+
+MultiMNIST: https://app.wandb.ai/ishaan-malhi/multi-task-learning
+
+Note: Reproducing paper results for multi-task CIFAR-100 and NYUv2 are pending.
