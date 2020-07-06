@@ -83,7 +83,7 @@ def pc_grad_update(gradient_list):
     for k in range(num_tasks): # TODO(speedup): convert to map since they are faster
       conflict_gradient_candidate = gradient_list[k]
       # no need to store dims of candidate since we are not changing it in the array
-      conflict_gradient_candidate, _ = flatten_and_store_dims(grad_task)
+      conflict_gradient_candidate, _ = flatten_and_store_dims(conflict_gradient_candidate)
       
       inner_product = torch.dot(torch.flatten(grad_task), torch.flatten(conflict_gradient_candidate))
       # TODO(speedup): put conflict check condition here so that we aren't calculating norms for non-conflicting gradients
